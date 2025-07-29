@@ -1,152 +1,64 @@
-# CIS-509-Analytics-Unstructured-Data-Yelp-Data-Analysis
-
-# Yelp Data Analysis Project
-
-## Overview
-This project analyzes Yelp restaurant reviews to identify key factors contributing to positive and negative ratings, explore relationships between reviews, tipping behavior, and overall ratings, and compare trends across Florida (FL) and Pennsylvania (PA). The focus is on restaurants serving American, Chinese, and Italian cuisine.
-
-**Data Sources**
-Yelp Dataset: https://business.yelp.com/data/resources/open-dataset/
-
-We created filtered CSV files after processing the original JSON files to include only our required data:
-
-- Filtered for restaurants in FL and PA serving American, Chinese, and Italian cuisine
-
-- Resulting filtered CSV files:
-
-  - F_filtered_business.csv
-
-  - F_filtered_review.csv
-
-  - F_filtered_user.csv
-
-  - F_filtered_tip.csv
-
-These filtered CSV files were used for all subsequent analyses in our project.
-
-## Key Findings
-
-**Sentiment Analysis:**
-
-1-Star Reviews: Focus on complaints about food, service, delays, and overall experience
-
-5-Star Reviews: Highlight praise for food quality, great experiences, and excellent service
-
-**Topic Modeling:**
-
-Common themes across cuisines: Food quality, service issues
-
-American Cuisine: Wings, brunch, happy hour specials
-
-Chinese Cuisine: Authentic dishes, dim sum, service complaints
-
-Italian Cuisine: Pizza, pasta, wine pairings, gluten-free options
-
-**Regional Preferences:**
-
-Florida: Higher preference for Italian and seafood, outdoor dining, brunch
-
-Pennsylvania: Higher preference for wings and pancakes, concerns about parking and tipping
-
-**Factors Influencing Ratings:**
-
-Positive: Food quality, ambiance, specific dishes, dining experience
-
-Neutral: Administrative procedures (reservations, payment methods)
-
-Negative: Poor service, refund problems, waiting times, overall negative experiences
-
-**Key Statistics**
-
-Total Reviews: 845,306
-
-Unique Words: 297,193
-
-Unique Customers: 351,921
-
-Businesses: 8,642
-
-Reviews for PA: 566,833
-
-Reviews for FL: 398,808
-
-American Cuisine Reviews: 676,072
-
-Chinese Cuisine Reviews: 100,164
-
-Italian Cuisine Reviews: 189,405
-
-**Analysis Techniques**
-
-- Exploratory Data Analysis (EDA)
-
-- Sentiment Analysis
-
-- Topic Modeling
-
-- Word Cloud Visualization
-
-- Bigram and Trigram Analysis
-
-
-## Project Navigation
-The project is organized into multiple Python files:
-
-***CIS-509-Yelp-Data-Analysis-Project-Part-1.ipynb:***
-
-- Initial data loading and preprocessing
-
-- Exploratory Data Analysis (EDA)
-
-- Bigram and Trigram analysis
-
-- Word Cloud visualizations
-
-***CIS-509-Yelp-Data-Analysis-Project-Part-2.ipynb:***
-
-- Topic Modeling using BERTopic
-
-- Sentiment Classification
-
-- Regional and Cuisine Comparison
-
-
-## Recommendations
-
-- Focus on improving food quality across all cuisines
-
-- Enhance service training to address common complaints
-
-- Tailor offerings to regional preferences (e.g., outdoor seating in Florida)
-
-- Improve operational efficiency in areas like reservations and payment processing
-
-- Address specific cuisine-related opportunities:
-
-  - American: Emphasize brunch and happy hour specials
-
-  - Italian: Expand gluten-free options
-
-  - Chinese: Improve service quality
-
-## Tools and Technologies Used
-
-- Python
-
-- Pandas
-
-- NLTK
-
-- Matplotlib
-
-- Seaborn
-
-- BERTopic
-
-## Future Work
-
-- Incorporate more advanced natural language processing techniques
-
-- Analyze temporal trends in reviews and ratings
-
-- Investigate the impact of external factors (e.g., economic conditions, seasonal variations) on restaurant ratings
+# 🗣️ Yelp Data Analysis: Unstructured Data
+
+**CIS 509 – Analytical Unstructured Data** | Mar 2025  
+**Team 011:** Ayush Trivedi, Dheeraj Pamnani, Dominic Darrah, Riya Agarwal, Sravani Bolla   
+
+---
+
+## 🚀 Business Problem  
+Restaurants’ customer satisfaction hinges on food quality, service, pricing, and ambiance. By mining Yelp reviews, tips and star‐ratings, we identify themes driving positive or negative experiences—enabling data‐driven improvements. 
+
+---
+
+## 📊 Data & Scope  
+- **Source:** Yelp Open Dataset (Business, Review, Tip)   
+- **Filters:**  
+  - **States:** Florida (FL), Pennsylvania (PA)  
+  - **Cuisines:** American, Chinese, Italian  
+- **Processed CSVs:**  
+  - `F_filtered_business.csv`  
+  - `F_filtered_review.csv`  
+  - `F_filtered_tip.csv`  
+  - `F_filtered_user.csv`   
+
+---
+
+## 🔬 Methodology  
+1. **Exploratory Data Analysis (EDA):**  
+   - Star‐rating distribution, review lengths, common bigrams/trigrams (e.g., “food good”, “highly recommend”)   
+2. **Sentiment Analysis:**  
+   - Classify reviews by star rating; extract themes in 1-star (service complaints, delays) vs. 5-star (food quality, service praise)   
+3. **Topic Modeling:**  
+   - Clean tip text, apply BERTopic + UMAP → 30 topics via HDBSCAN; visualize topic prevalence by cuisine & state   
+4. **Regional & Cuisine Comparison:**  
+   - Compare topic frequencies across FL vs. PA and American/Chinese/Italian segments  
+
+---
+
+## ✨ Key Findings  
+- **Sentiment Themes:**  
+  - **1-Star:** Service issues, wait times, food complaints  
+  - **5-Star:** Food quality, great service, ambiance   
+- **Topic Insights:**  
+  - *Food Quality & Service* dominate positive feedback  
+  - *Reservations & Parking* are key neutral topics  
+  - *Tipping Issues* and *Service Complaints* drive negative reviews  
+- **Cuisine Variations:**  
+  - **American:** Wings, brunch, happy-hour specials  
+  - **Italian:** Pizza, pasta, wine pairings, gluten-free options  
+  - **Chinese:** Authentic Sichuan dishes, occasional service complaints   
+- **Regional Differences:**  
+  - **Florida:** Outdoor seating, brunch focus, higher Italian & seafood mentions  
+  - **Pennsylvania:** Parking & tipping concerns, higher wings & pancakes mentions  
+
+---
+
+## 📝 Recommendations  
+- **Elevate Signature Dishes:** Spotlight popular brunch and happy-hour menus  
+- **Streamline Service:** Improve reservation workflows and queue management  
+- **Enhance Ambiance:** Expand outdoor seating in FL; address parking in PA  
+- **Clarify Tipping:** Standardize gratuity policies and customer communication  
+
+---
+
+## 📂 Repository Structure  
