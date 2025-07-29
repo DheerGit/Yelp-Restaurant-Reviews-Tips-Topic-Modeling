@@ -58,7 +58,3 @@ Restaurants’ customer satisfaction hinges on food quality, service, pricing, a
 - **Streamline Service:** Improve reservation workflows and queue management  
 - **Enhance Ambiance:** Expand outdoor seating in FL; address parking in PA  
 - **Clarify Tipping:** Standardize gratuity policies and customer communication  
-
----
-
-## 📂 Repository Structure  
